@@ -8,10 +8,10 @@ void swap(int *a, int *b) {
 
 int Partition(int arr[], int low, int high) {
     int pivot = arr[low];
-    int i = low + 1; // Start from the next element
+    int i = low; // Start from the next element
     int j = high;
     while (i <= j) {
-        while (i <= high && arr[i] <= pivot) 
+        while (arr[i] <= pivot) 
             i++;
         while (arr[j] > pivot) 
             j--;
